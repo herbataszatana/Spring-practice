@@ -11,9 +11,19 @@ public class TodoService {
 
     private List<Todo> todos = new ArrayList<>();
 
+    public TodoService(){
+        // Adding some dummy data
+        todos.add(new Todo("Walk the dog", new Date(), false, 1L));
+        todos.add(new Todo("Go grocery shopping", new Date(), false, 2L));
+        todos.add(new Todo("Complete the project", new Date(), true, 3L));
+    }
     private Long nextId = 1L;
-    
+
     public List<Todo> getAllTodos() {
+        //Dummy data
+        for(Todo todo: todos){
+            System.out.println(todo);
+        }
         return todos;
     }
 
