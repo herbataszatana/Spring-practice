@@ -5,14 +5,14 @@ import java.util.Date;
 public class Todo {
     private String task;
     private Date createdDate;
-    private boolean completed;
     private Long id;
+    private String status;
 
-    public Todo(String task, Date createdDate, boolean completed, Long id){
+    public Todo(String task, Date createdDate, Long id, String status){
         this.task = task;
         this.createdDate = createdDate;
-        this.completed = completed;
         this.id = id;
+        this.status = status;
     }
 
     public String getTask() {
@@ -29,14 +29,6 @@ public class Todo {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
     }
 
     public Long getId() {
