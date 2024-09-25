@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/todos")
+@RequestMapping("/api")  // Base path for your API endpoints
 public class TodoController {
 
     private final TodoService todoService;
@@ -16,12 +16,14 @@ public class TodoController {
         this.todoService = todoService;
     }
 
-    @GetMapping
+    // GET endpoint to retrieve all to-do items, accessible at /api/getTodos
+    @GetMapping("/getTodos")
     public List<Todo> getAllTodos() {
         return todoService.getAllTodos();
     }
 
-    @PostMapping
+    // POST endpoint to add a new to-do item, accessible at /api/addTodo
+    @PostMapping("/addTodo")
     public Todo addTodo(@RequestBody String title) {
         return todoService.addTodo(title);
     }
