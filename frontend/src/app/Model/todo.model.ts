@@ -1,6 +1,12 @@
 export interface Todo {
     id: number;
     task: string;
-    createdDate: Date;
-    status: 'NotStarted' | 'InProgress' | 'Done'; // Using union type for statuses
-}
+    createdDate: string;
+    status: TodoStatus;
+  }
+  
+  export enum TodoStatus {
+    TODO = 'TODO',
+    IN_PROGRESS = 'IN_PROGRESS',
+    DONE = 'DONE'
+  }

@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")  // Base path for your API endpoints
+@CrossOrigin(origins = "http://localhost:4200")
 public class TodoController {
 
     private final TodoService todoService;
